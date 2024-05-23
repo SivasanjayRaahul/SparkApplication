@@ -6,9 +6,8 @@ name = "pypi"
 [packages]
 pyspark = "==3.0.2"
 pytest = "*"
-numpy = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.9.18"
