@@ -2,6 +2,7 @@ import pytest
 
 from lib import utils
 
+
 @pytest.fixture(scope="session")
 def spark():
     return utils.get_spark_session()
