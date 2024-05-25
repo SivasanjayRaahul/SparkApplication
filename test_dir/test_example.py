@@ -1,10 +1,9 @@
 import pytest
 
-import lib.utils
-
+from lib.utils import get_spark_session
 @pytest.fixture(scope="session")
 def spark():
-    return lib.utils.get_spark_session()
+    return get_spark_session()
 
 
 def test_blank_test(spark):
