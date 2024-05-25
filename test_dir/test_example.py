@@ -1,7 +1,6 @@
 import pytest
 
-from lib import utils
-
+from ..lib import utils
 
 @pytest.fixture(scope="session")
 def spark():
