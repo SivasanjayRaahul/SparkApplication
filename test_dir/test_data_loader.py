@@ -20,7 +20,7 @@ def expected_input_df(spark):
     schema = StructType([StructField("video_id", IntegerType(), False),
                          StructField("timestamp", TimestampType(), False)])
 
-    return spark.read.format("csv").schema(schema).load("../test_data/test_data_input.csv")
+    return spark.read.format("csv").schema(schema).load("test_data/test_data_input.csv")
 
 
 def test_data_loader(expected_input_df, env, spark):
