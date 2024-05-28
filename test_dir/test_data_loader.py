@@ -1,3 +1,5 @@
+import datetime
+
 import pytest
 from pyspark.sql.types import StructType, StructField, IntegerType, TimestampType
 from chispa import assert_df_equality
@@ -24,5 +26,5 @@ def expected_input_df(spark):
 
 
 def test_data_loader(expected_input_df, env, spark):
-    actual_df = data_loader.load(env, spark)
+    actual_df = data_loader.load(env, spark, date=datetime.date.today())
     assert_df_equality(actual_df, expected_input_df)
