@@ -11,5 +11,4 @@ def get_spark_session(env):
 
     elif env == "PROD":
         return (SparkSession.builder.config(conf=config_loader.get_spark_conf(env))
-                .config('spark.driver.extraJavaOptions',
-                        '-Dlog4j.configuration=file:log4j.properties').getOrCreate())
+                .getOrCreate())
