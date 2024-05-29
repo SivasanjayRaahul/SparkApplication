@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     date_env = sys.argv[2]
     date_format = "%Y-%m-%d"
-    date = datetime.datetime.strptime(date_env, date_format)
+    date = datetime.datetime.strptime(date_env, date_format).date()
 
     print("Initializing Spark Job in " + job_run_env)
     spark = utils.get_spark_session(job_run_env)
